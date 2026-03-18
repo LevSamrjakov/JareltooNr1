@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -52,5 +53,42 @@ namespace JäreltööNr1
 
             Console.WriteLine($"Sündisid {Sünnipäev}. päeval, {Sünnikuu}. kuul aastal {Sünniaasta}.");
         }
+
+        public static void MundiMang()
+        {
+            ArrayList Results = new ArrayList();
+            Random Coin = new Random();
+            int Loops = 10;
+            int HeadsCount = 0;
+            int TailsCount = 0;
+            for (int I = 0; I < Loops; I++)
+            {
+                int Side = Coin.Next(0, 2);
+                if (Side == 0)
+                {
+                    Results.Add("Heads");
+                    HeadsCount++;
+                }
+                else
+                {
+                    Results.Add("Tails");
+                    TailsCount++;
+                }
+            }
+            foreach (string Result in Results)
+            {
+                Console.WriteLine(Result);
+            }
+            Console.WriteLine($"In total Heads came up {HeadsCount} times.");
+            Console.WriteLine($"In total Tails came up {TailsCount} times.");
+        }
+
+        //public static Tuple<double, double> CalculateRectangle(double Length, double Width)
+        //{
+        //    double Area = Length * Width;
+        //    double Perimeter = 2 * (Length + Width);
+
+        //    return
+        //}
     }
 }

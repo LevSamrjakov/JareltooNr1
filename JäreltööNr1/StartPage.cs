@@ -29,15 +29,11 @@ namespace JäreltööNr1
                         break;
 
                     case "3":
-
+                        Subfunctions.MundiMang();
                         break;
 
                     case "4":
-
-                        break;
-
-                    case "5":
-
+                        //Subfunctions.CalculateRectangle();
                         break;
 
                     case "0":
